@@ -70,11 +70,16 @@ roomsField.value = suggestedRooms;
 }
 
 }
-document.querySelector('[name="adults"]').addEventListener("change", updateRooms);
+const adultsField = document.querySelector('[name="adults"]');
+
+if (adultsField) {
+    adultsField.addEventListener("change", updateRooms);
+}
 
 function changeCount(type, change){
 
 const field = document.querySelector('[name="'+type+'"]');
+if (!field) return;
 
 let value = parseInt(field.value);
 

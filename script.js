@@ -78,24 +78,30 @@ if (adultsField) {
 
 function changeCount(type, change) {
     const input = document.querySelector(`[name="${type}"]`);
-    if (!input) return;
-
     let value = parseInt(input.value) || 0;
+
     value += change;
 
+    // Rooms limit
     if (type === "rooms") {
-        value = Math.max(1, Math.min(8, value));
+        if (value < 1) value = 1;
+        if (value > 8) value = 8;
     }
 
+    // Adults limit (based on rooms)
     if (type === "adults") {
-        value = Math.max(1, Math.min(16, value));
+        let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
+        let maxAdults = rooms * 2;
+
+        if (value < 1) value = 1;
+        if (value > maxAdults) value = maxAdults;
     }
 
+    // Children limit (optional)
     if (type === "children") {
-        value = Math.max(0, value);
+        if (value < 0) value = 0;
+        if (value > 10) value = 10; // adjust if needed
     }
 
     input.value = value;
-
-    updateRooms();
 }

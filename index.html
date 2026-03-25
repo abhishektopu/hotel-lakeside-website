@@ -43,50 +43,38 @@
 </div>
 
 <!-- BOOKING FORM -->
-<form class="booking-bar" onsubmit="searchRooms(event)">
+<form onsubmit="return searchRooms(event)">
 
-<input type="date" name="checkin" required>
-<input type="date" name="checkout" required>
-
-<div class="counter-group">
-
-<!-- ROOMS -->
-<div>
+  <!-- ROOMS -->
+  <div>
     <label>Rooms</label><br>
-
     <button type="button" onclick="changeCount('rooms', -1)">-</button>
-
     <input type="number" name="rooms" value="1" readonly>
-
     <button type="button" onclick="changeCount('rooms', 1)">+</button>
-</div>
-<!-- ADULTS -->
-<div>
+  </div>
+
+  <!-- ADULTS -->
+  <div>
     <label>Adults</label><br>
-
     <button type="button" onclick="changeCount('adults', -1)">-</button>
-
     <input type="number" name="adults" value="1" readonly>
-
     <button type="button" onclick="changeCount('adults', 1)">+</button>
-</div>
-<!-- CHILDREN -->
-<div>
+  </div>
+
+  <!-- CHILDREN -->
+  <div>
     <label>Children</label><br>
-
     <button type="button" onclick="changeCount('children', -1)">-</button>
-
     <input type="number" name="children" value="0" readonly>
-
     <button type="button" onclick="changeCount('children', 1)">+</button>
-</div>
+  </div>
 
-<p id="roomNote">Maximum 2 adults per room</p>
+  <p id="roomNote">Maximum 2 adults per room</p>
 
-<button type="submit">Check Availability</button>
+  <button type="submit">Check Availability</button>
 
 </form>
-
+    
 </div>
 </section>
 

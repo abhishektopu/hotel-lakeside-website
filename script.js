@@ -62,39 +62,37 @@ window.addEventListener("load", function () {
 
 // ================= MAIN COUNTER FUNCTION =================
 function changeCount(type, change) {
+
     const field = document.querySelector('[name="' + type + '"]');
+    if (!field) return;
+
     let value = parseInt(field.value) || 0;
 
     value += change;
 
-    let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
-
-    // 🔹 ROOMS LIMIT
+    // ===== ROOMS =====
     if (type === "rooms") {
         if (value < 1) value = 1;
         if (value > 8) value = 8;
     }
 
-    // 🔹 ADULTS LIMIT (2 per room)
+    // ===== ADULTS =====
     if (type === "adults") {
+        let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
         let maxAdults = rooms * 2;
 
         if (value < 1) value = 1;
         if (value > maxAdults) value = maxAdults;
     }
 
-    // 🔹 CHILDREN LIMIT
+    // ===== CHILDREN =====
     if (type === "children") {
         if (value < 0) value = 0;
         if (value > 10) value = 10;
     }
 
     field.value = value;
-
-    // 🔥 FORCE SYNC AFTER CHANGE
-    enforceLimits();
 }
-
 
 // ================= FORCE LIMIT SYNC =================
 function enforceLimits() {

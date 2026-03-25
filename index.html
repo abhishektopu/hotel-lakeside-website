@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- Mirrored from www.hotellakeside.co.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Mar 2026 05:11:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
+<meta name="description" content="Hotel Lakeside is a budget hotel in Cherlapally Hyderabad offering AC and Non-AC rooms with WiFi, parking and comfortable stay near industrial area.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Hotel Lakeside | Budget Hotel in Cherlapally Hyderabad</title>
 
-<link rel="stylesheet" href="stylef500.css">
+<meta name="keywords" content="Hotel in Cherlapally, budget hotel Cherlapally Hyderabad, hotels near ECIL Hyderabad, rooms in Cherlapally, hotel near Cherlapally railway station">
+
+<meta name="author" content="Hotel Lakeside">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Hotel Lakeside | Budget Hotel in Cherlapally Hyderabad">
+
+<meta property="og:description" content="Comfortable AC and Non-AC rooms in Cherlapally Hyderabad. Direct booking available via WhatsApp.">
+
+<meta property="og:image" content="hotel-building.html">
+
+<meta property="og:url" content="index.html">
+
+<meta property="og:type" content="website">
+<link rel="canonical" href="index.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "@id": "https://hotellakeside.co.in/#hotel",
+  "name": "Hotel Lakeside",
+  "url": "https://hotellakeside.co.in/",
+  "image": [
+    "https://hotellakeside.co.in/images/hotel-building.jpg",
+    "images/hotel-front.jpg",
+    "images/hotel-room.jpg",
+    "images/reception-area.jpg"
+  ],
+  "telephone": "+91-7899358934",
+  "priceRange": "₹ 1000",
+  "checkinTime": "12:00",
+  "checkoutTime": "11:00",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cherlapally",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500051",
+    "addressCountry": "IN"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4780,
+    "longitude": 78.6435
+  },
+
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free WiFi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Air Conditioning",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parking",
+      "value": true
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="stylef500.css?v=13">
 <link rel="icon" href="images/hotel-building.jpg">
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
+
 <header class="navbar">
+
 <div class="logo">Hotel Lakeside</div>
 
 <div class="nav-right">
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="menu-toggle" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleMenu()" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">☰</div>
 
 <div class="menu">
 <a href="index.html">Home</a>
 <a href="rooms.html">Rooms</a>
 <a href="gallery.html">Gallery</a>
 <a href="contact.html">Contact</a>
-<a class="book" href="#">Book Now</a>
+<a class="book" href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside">
+Book Now
+</a>
 </div>
+
 </div>
+
 </header>
 
-<!-- HERO -->
 <section class="hero">
 
 <div class="hero-text">
@@ -39,91 +120,142 @@
 
 <div class="hero-buttons">
 <a href="rooms.html" class="btn">View Rooms</a>
-<a href="#" class="btn book">Book Room</a>
+<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside" class="btn book">Book Room</a>
 </div>
 
-<!-- BOOKING FORM -->
-<form onsubmit="return searchRooms(event)">
+<form class="booking-bar" onsubmit="if (!window.__cfRLUnblockHandlers) return false; window.open('https://wa.me/917899358934?text=I%20want%20to%20book%20a%20room','_blank'); return false;" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">
 
-  <!-- ROOMS -->
-  <div>
-    <label>Rooms</label><br>
-    <button type="button" onclick="changeCount('rooms', -1)">-</button>
-    <input type="number" name="rooms" value="1" readonly>
-    <button type="button" onclick="changeCount('rooms', 1)">+</button>
-  </div>
+<input type="date" name="checkin" required>
+<input type="date" name="checkout" required>
 
-  <!-- ADULTS -->
-  <div>
-    <label>Adults</label><br>
-    <button type="button" onclick="changeCount('adults', -1)">-</button>
-    <input type="number" name="adults" value="1" readonly>
-    <button type="button" onclick="changeCount('adults', 1)">+</button>
-  </div>
+<div class="counter-group">
 
-  <!-- CHILDREN -->
-  <div>
-    <label>Children</label><br>
-    <button type="button" onclick="changeCount('children', -1)">-</button>
-    <input type="number" name="children" value="0" readonly>
-    <button type="button" onclick="changeCount('children', 1)">+</button>
-  </div>
+  <div class="counter">
+<span>Rooms</span>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('rooms',-1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">−</button>
+<input type="number" name="rooms" value="1" min="1" max="8" readonly>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('rooms',1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">+</button>
+</div>
 
-  <p id="roomNote">Maximum 2 adults per room</p>
+<div class="counter">
+<span>Adults</span>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('adults',-1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">−</button>
+<input type="number" name="adults" value="1" min="1" max="16" readonly>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('adults',1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">+</button>
+</div>
 
-  <button type="submit">Check Availability</button>
+<div class="counter">
+<span>Children</span>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('children',-1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">−</button>
+<input type="number" name="children" value="0" min="0" max="10" readonly>
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCount('children',1)" data-cf-modified-2c9ff19f9ece6fb5e71717f1-="">+</button>
+</div>
+
+</div>
+
+<p class="room-note" id="roomNote">Maximum 2 adults per room</p>
+
+<button type="submit">Check Availability</button>
 
 </form>
-    
-</div>
-</section>
 
-<!-- GALLERY -->
+</div>
+
+</section>
+<!-- ROOMS SECTION -->
+
 <section class="gallery">
+
 <h2>Hotel Gallery</h2>
 
 <div class="gallery-grid">
-<img src="images/hotel-front.jpg">
-<img src="images/reception-area.jpg">
-<img src="images/hotel-room.jpg">
-<img src="images/hotel-corridor.jpg">
+
+<img src="images/hotel-front.jpg" alt="Hotel Lakeside front view">
+<img src="images/reception-area.jpg" alt="Hotel Lakeside reception area">
+<img src="images/hotel-room.jpg" alt="AC room in Hotel Lakeside Cherlapally Hyderabad">
+<img src="images/hotel-corridor.jpg" alt="Hotel Lakeside corridor">
+
 </div>
+
 </section>
 
-<!-- ROOMS -->
 <section id="rooms">
+
 <h2>Our Rooms</h2>
 
 <div class="rooms">
 
 <div class="room">
-<img src="images/ac-room.jpg">
+
+<img src="images/ac-room.jpg" alt="AC room at Hotel Lakeside Cherlapally Hyderabad">
+
 <div class="room-info">
 <h3>AC Room</h3>
 <p>AC, TV, Wifi, Geyser</p>
 <b>₹1500 / Night</b>
+<br><br>
+<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20an%20AC%20room%20at%20Hotel%20Lakeside" class="btn">Book Now</a>
 </div>
+
 </div>
 
 <div class="room">
-<img src="images/non-ac-room.jpg">
+
+<img src="images/non-ac-room.jpg" alt="Non AC room at Hotel Lakeside Cherlapally Hyderabad">
+
 <div class="room-info">
 <h3>Non AC Room</h3>
 <p>Queen Bed, Wifi, Geyser</p>
 <b>₹1000 / Night</b>
-</div>
+<br><br>
+<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20a%20Non%20AC%20room%20at%20Hotel%20Lakeside" class="btn">Book Now</a>
 </div>
 
 </div>
+
+</div>
+
+
 </section>
 
+<!-- ABOUT HOTEL SECTION -->
+
+<section class="about">
+
+<h2>Budget Hotel in Cherlapally Hyderabad</h2>
+
+<p>
+Hotel Lakeside is a comfortable budget hotel located in Cherlapally, Hyderabad.
+We offer AC and Non-AC rooms with free WiFi, parking, and convenient access to
+the Cherlapally Industrial Area. Ideal for business travelers and visitors
+looking for affordable accommodation in Hyderabad.
+</p>
+
+</section>
+
+
+
+
 <!-- FOOTER -->
+
 <footer>
 © 2026 Hotel Lakeside
 </footer>
 
-<!-- CORRECT SCRIPT -->
-<script src="script.js"></script>
+<script src="script.js" type="2c9ff19f9ece6fb5e71717f1-text/javascript"></script>
+<a href="https://wa.me/917899358934?text=I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside" class="book-now-fixed">
+Book Now
+</a>
 
+<div class="mobile-book-bar">
+<a href="tel:+917899358934" class="call-btn">Call Now</a>
+<a href="https://wa.me/917899358934?text=I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside" class="whatsapp-btn">WhatsApp</a>
+</div>
+
+
+<script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2c9ff19f9ece6fb5e71717f1-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"a5d6f809b4514807b515014adc397170","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
+
+
+<!-- Mirrored from www.hotellakeside.co.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Mar 2026 05:11:56 GMT -->
 </html>

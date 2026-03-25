@@ -81,40 +81,37 @@ function updateRooms() {
     adultsField.value = adults;
 }
 // ================= MAIN COUNTER FUNCTION =================
-function changeCount(type, change) {
-    const input = document.querySelector(`[name="${type}"]`);
-    if (!input) return;
 
-    let value = parseInt(input.value) || 0;
+function changeCount(type, change) {
+    const field = document.querySelector('[name="' + type + '"]');
+    let value = parseInt(field.value) || 0;
 
     value += change;
 
-    // -------- ROOMS --------
+    let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
+
+    // ✅ ROOMS LIMIT
     if (type === "rooms") {
         if (value < 1) value = 1;
         if (value > 8) value = 8;
     }
 
-    // -------- ADULTS --------
+    // ✅ ADULTS LIMIT (2 per room)
     if (type === "adults") {
-        let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
         let maxAdults = rooms * 2;
 
         if (value < 1) value = 1;
         if (value > maxAdults) value = maxAdults;
     }
 
-    // -------- CHILDREN --------
+    // ✅ CHILDREN LIMIT
     if (type === "children") {
         if (value < 0) value = 0;
         if (value > 10) value = 10;
     }
 
-    input.value = value;
-
-    updateRooms();
+    field.value = value;
 }
-document.querySelector('[name="rooms"]').addEventListener("change", updateRooms);
 
 
 // ================= FIX MANUAL INPUT =================

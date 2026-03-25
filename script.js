@@ -143,3 +143,7 @@ document.addEventListener("input", function (e) {
 
     updateRooms();
 });
+
+document.querySelector('[name="rooms"]').addEventListener("input", () => changeCount("rooms", 0));
+document.querySelector('[name="adults"]').addEventListener("input", () => changeCount("adults", 0));
+document.querySelector('[name="children"]').addEventListener("input", () => changeCount("children", 0));

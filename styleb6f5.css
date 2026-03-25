@@ -1,0 +1,676 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+overflow-x:hidden;
+}
+
+
+section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+position:relative;
+z-index:1001;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:25px;
+z-index:1000;
+}
+
+
+
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+background:#1f3b4d;
+color:white;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+margin-left:25px;
+transition:0.3s;
+font-weight:500;
+}
+
+
+.navbar a:hover{
+color:#d4af37;
+}
+
+.book-btn{
+background:#ffd34d;
+color:black !important;
+padding:10px 18px;
+border-radius:6px;
+font-weight:bold;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+background:url('images/hotel-building.jpg') center/cover no-repeat;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.10);
+z-index:1;
+}
+
+.hero-text{
+position:relative;
+z-index:2;
+max-width:600px;
+color:white;
+margin:auto;
+}
+
+
+.hero-text h1{
+font-size:clamp(36px, 6vw, 60px);
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:10px;
+}
+
+.btn{
+background:#d4af37;
+padding:14px 28px;
+border-radius:10px;
+color:black;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+min-width:170px;
+text-align:center;
+transition:0.3s ease;
+}
+
+.btn.book{
+background:#ffffff;
+color:#000;
+border:2px solid #d4af37;
+border-radius:10px;
+}
+
+/* ROOMS GRID */
+
+.rooms{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+gap:30px;
+margin-top:30px;
+max-width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* ROOM CARD */
+
+.room{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+display:flex;
+flex-direction:column;
+}
+
+.room:hover{
+transform:translateY(-6px);
+}
+
+.room img{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+}
+.room-info{
+padding:20px;
+}
+
+.room-info h3{
+margin-top:0;
+}
+
+.gallery-grid {
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+gap:20px;
+}
+
+.gallery-item {
+position:relative;
+overflow:hidden;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.4s ease;
+display:block;
+}
+
+/* HOVER ZOOM EFFECT */
+.gallery-item:hover img {
+transform:scale(1.08);
+}
+
+/* OVERLAY EFFECT */
+.gallery-item::after {
+content:"View Image";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.6);
+color:#fff;
+text-align:center;
+padding:10px;
+opacity:0;
+transition:0.3s;
+font-size:14px;
+}
+
+.gallery-item:hover::after {
+opacity:1;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f3b4d;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.navbar{
+flex-direction:row;
+padding:15px;
+align-items:center;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-right{
+flex-direction:column;
+align-items:flex-end;
+width:100%;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+background:#1f3b4d;
+padding-top:80px;
+text-align:center;
+transform:translateX(-100%);
+transition:0.3s ease;
+z-index:2000;
+}
+
+.menu.active{
+transform:translateX(0);
+}
+
+.menu a{
+font-size:20px;
+margin:15px 0;
+}
+
+.hero{
+padding:0 15px;
+min-height:90vh;
+}
+
+.btn{
+width:180px;
+font-size:16px;
+}
+
+/* MOBILE HEADER FIX */
+
+.menu{
+padding-top:100px;
+}
+
+.book-btn{
+display:block;
+margin-top:20px;
+width:160px;
+text-align:center;
+}
+.logo{
+font-size:18px;
+}
+}
+
+
+
+
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:999;
+}
+/* GALLERY SLIDER */
+
+.gallery{
+text-align:center;
+padding:60px 8%;
+}
+
+.slider{
+position:relative;
+max-width:1000px;
+margin:auto;
+overflow:hidden;
+}
+
+.slide{
+width:100%;
+display:none;
+border-radius:10px;
+}
+
+.slide.active{
+display:block;
+}
+
+
+.whatsapp:hover{
+background:#1ebe5d;
+}
+.back-home{
+text-align:center;
+margin:40px 0;
+}
+
+.back-home a{
+background:#1f3b4d;
+color:white;
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.back-home a:hover{
+background:#163041;
+}
+
+.gallery-item img{
+cursor:pointer;
+}
+
+.lb-data .lb-caption{
+font-size:16px;
+font-weight:500;
+}
+
+/* CONTACT PAGE UI IMPROVEMENT */
+
+.contact-section{
+padding:60px 20px;
+background:#f5f7fa;
+}
+
+.contact-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.contact-card{
+background:#ffffff;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-card h3{
+margin-bottom:10px;
+color:#1f3c58;
+}
+
+.contact-card p{
+color:#444;
+line-height:1.6;
+}
+
+.contact-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#1f3c58;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.contact-btn:hover{
+background:#163046;
+}
+
+.contact-btn.green{
+background:#2ecc71;
+}
+
+.contact-btn.green:hover{
+background:#27ae60;
+}
+.map-section{
+max-width:1100px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-section iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:8px;
+}
+
+
+
+/* FIXED BOOK NOW BUTTON */
+
+.book-now-fixed{
+position:fixed;
+bottom:120px;
+right:15px;
+background:#f5c542;
+color:#000;
+padding:12px 18px;
+border-radius:8px;
+font-weight:bold;
+z-index:999;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.book-now-fixed:hover{
+background:#e5b932;
+box-shadow:0 6px 18px rgba(0,0,0,0.35);
+transform:translateY(-2px);
+}
+.about{
+max-width:900px;
+margin:auto;
+padding:60px 8%;
+text-align:center;
+}
+
+.about h2{
+margin-bottom:20px;
+color:#1f3b4d;
+}
+
+.about p{
+font-size:18px;
+line-height:1.6;
+color:#444;
+}
+
+/* MOBILE BOOKING BAR */
+
+.mobile-book-bar{
+display:none;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 14px rgba(0,0,0,0.25);
+}
+
+@media(max-width:768px){
+
+.mobile-book-bar{
+display:flex;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+z-index:9999;
+}
+ 
+
+.call-btn{
+flex:1;
+background:#1f3b4d;
+color:white;
+text-align:center;
+padding:14px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp-btn{
+flex:1;
+background:#25D366;
+color:white;
+text-align:center;
+padding:14px;
+text-decoration:none;
+font-weight:bold;
+}
+
+}
+@media(max-width:768px){
+.book-now-fixed{
+bottom:180px;
+}
+}
+
+/* HERO BOOKING BAR */
+
+.booking-bar{
+display:flex;
+gap:10px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.booking-bar input,
+.booking-bar select{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+.booking-bar > button{
+background:#d4af37;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+color:black;
+}
+
+.booking-bar button:hover{
+background:#c49c2f;
+}
+
+.counter-group{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.counter{
+display:flex;
+align-items:center;
+gap:5px;
+background:white;
+padding:8px 10px;
+border-radius:6px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.counter button{
+background:#1f3b4d;
+color:#fff;
+border:none;
+width:32px;
+height:32px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+font-size:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.counter input{
+width:60px;
+text-align:center;
+border:none;
+font-weight:bold;
+background:transparent;
+}
+
+.room-note{
+font-size:13px;
+color:#555;
+margin-top:8px;
+margin-bottom:10px;
+text-align:center;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+padding: 20px;
+}
+
+.gallery img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+}

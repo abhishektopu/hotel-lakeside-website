@@ -51,29 +51,34 @@
 <div class="counter-group">
 
 <!-- ROOMS -->
-<div class="counter">
-<span>Rooms</span>
-<button type="button" onclick="changeCount('rooms', -1)">-</button>
-<input type="number" name="rooms" value="1" readonly>
-<button type="button" onclick="changeCount('rooms', 1)">+</button>
-</div>
+<div>
+    <label>Rooms</label><br>
 
+    <button type="button" onclick="changeCount('rooms', -1)">-</button>
+
+    <input type="number" name="rooms" value="1" readonly>
+
+    <button type="button" onclick="changeCount('rooms', 1)">+</button>
+</div>
 <!-- ADULTS -->
-<div class="counter">
-<span>Adults</span>
-<button type="button" onclick="changeCount('adults', -1)">-</button>
-<input type="number" name="adults" value="1" readonly>
-<button type="button" onclick="changeCount('adults', 1)">+</button>
-</div>
+<div>
+    <label>Adults</label><br>
 
+    <button type="button" onclick="changeCount('adults', -1)">-</button>
+
+    <input type="number" name="adults" value="1" readonly>
+
+    <button type="button" onclick="changeCount('adults', 1)">+</button>
+</div>
 <!-- CHILDREN -->
-<div class="counter">
-<span>Children</span>
-<button type="button" onclick="changeCount('children', -1)">-</button>
-<input type="number" name="children" value="0" readonly>
-<button type="button" onclick="changeCount('children', 1)">+</button>
-</div>
+<div>
+    <label>Children</label><br>
 
+    <button type="button" onclick="changeCount('children', -1)">-</button>
+
+    <input type="number" name="children" value="0" readonly>
+
+    <button type="button" onclick="changeCount('children', 1)">+</button>
 </div>
 
 <p id="roomNote">Maximum 2 adults per room</p>

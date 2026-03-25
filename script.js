@@ -59,17 +59,27 @@ window.addEventListener("load", function () {
 
 // ================= AUTO FIX ADULT LIMIT =================
 function updateRooms() {
-    let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
+    let roomsField = document.querySelector('[name="rooms"]');
     let adultsField = document.querySelector('[name="adults"]');
+
+    let rooms = parseInt(roomsField.value) || 1;
     let adults = parseInt(adultsField.value) || 1;
 
+    // FORCE room limit
+    if (rooms > 8) rooms = 8;
+    if (rooms < 1) rooms = 1;
+
+    roomsField.value = rooms;
+
+    // FIX adults automatically
     let maxAdults = rooms * 2;
 
     if (adults > maxAdults) {
-        adultsField.value = maxAdults;
+        adults = maxAdults;
     }
-}
 
+    adultsField.value = adults;
+}
 // ================= MAIN COUNTER FUNCTION =================
 function changeCount(type, change) {
     const input = document.querySelector(`[name="${type}"]`);
@@ -104,6 +114,8 @@ function changeCount(type, change) {
 
     updateRooms();
 }
+document.querySelector('[name="rooms"]').addEventListener("change", updateRooms);
+
 
 // ================= FIX MANUAL INPUT =================
 document.addEventListener("input", function (e) {

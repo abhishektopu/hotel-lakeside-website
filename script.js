@@ -57,19 +57,19 @@ if(checkout) checkout.setAttribute("min", today);
 
 });
 
-function updateRooms(){
+function updateRooms() {
+    let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
+    let adultsField = document.querySelector('[name="adults"]');
+    let adults = parseInt(adultsField.value) || 1;
 
-const adults = parseInt(document.querySelector('[name="adults"]').value) || 0;
+    let maxAdults = rooms * 2;
 
-const roomsField = document.querySelector('[name="rooms"]');
-
-const suggestedRooms = Math.ceil(adults / 2);
-
-if(suggestedRooms > 0){
-roomsField.value = suggestedRooms;
+    if (adults > maxAdults) {
+        adultsField.value = maxAdults;
+    }
 }
 
-}
+
 const adultsField = document.querySelector('[name="adults"]');
 
 if (adultsField) {
@@ -82,13 +82,11 @@ function changeCount(type, change) {
 
     value += change;
 
-    // Rooms limit
     if (type === "rooms") {
         if (value < 1) value = 1;
         if (value > 8) value = 8;
     }
 
-    // Adults limit (based on rooms)
     if (type === "adults") {
         let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
         let maxAdults = rooms * 2;
@@ -97,11 +95,12 @@ function changeCount(type, change) {
         if (value > maxAdults) value = maxAdults;
     }
 
-    // Children limit (optional)
     if (type === "children") {
         if (value < 0) value = 0;
-        if (value > 10) value = 10; // adjust if needed
+        if (value > 10) value = 10;
     }
 
     input.value = value;
+
+    updateRooms();
 }

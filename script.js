@@ -10,6 +10,7 @@ document.querySelectorAll(".menu a").forEach(link => {
     });
 });
 
+
 // ================= SEARCH (WHATSAPP) =================
 function searchRooms(event) {
     event.preventDefault();
@@ -46,6 +47,7 @@ function searchRooms(event) {
     window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
 }
 
+
 // ================= DATE LIMIT =================
 window.addEventListener("load", function () {
     const today = new Date().toISOString().split("T")[0];
@@ -57,31 +59,8 @@ window.addEventListener("load", function () {
     if (checkout) checkout.setAttribute("min", today);
 });
 
-// ================= AUTO FIX ADULT LIMIT =================
-function updateRooms() {
-    let roomsField = document.querySelector('[name="rooms"]');
-    let adultsField = document.querySelector('[name="adults"]');
 
-    let rooms = parseInt(roomsField.value) || 1;
-    let adults = parseInt(adultsField.value) || 1;
-
-    // FORCE room limit
-    if (rooms > 8) rooms = 8;
-    if (rooms < 1) rooms = 1;
-
-    roomsField.value = rooms;
-
-    // FIX adults automatically
-    let maxAdults = rooms * 2;
-
-    if (adults > maxAdults) {
-        adults = maxAdults;
-    }
-
-    adultsField.value = adults;
-}
 // ================= MAIN COUNTER FUNCTION =================
-
 function changeCount(type, change) {
     const field = document.querySelector('[name="' + type + '"]');
     let value = parseInt(field.value) || 0;
@@ -90,13 +69,13 @@ function changeCount(type, change) {
 
     let rooms = parseInt(document.querySelector('[name="rooms"]').value) || 1;
 
-    // ✅ ROOMS LIMIT
+    // 🔹 ROOMS LIMIT
     if (type === "rooms") {
         if (value < 1) value = 1;
         if (value > 8) value = 8;
     }
 
-    // ✅ ADULTS LIMIT (2 per room)
+    // 🔹 ADULTS LIMIT (2 per room)
     if (type === "adults") {
         let maxAdults = rooms * 2;
 
@@ -104,13 +83,37 @@ function changeCount(type, change) {
         if (value > maxAdults) value = maxAdults;
     }
 
-    // ✅ CHILDREN LIMIT
+    // 🔹 CHILDREN LIMIT
     if (type === "children") {
         if (value < 0) value = 0;
         if (value > 10) value = 10;
     }
 
     field.value = value;
+
+    // 🔥 FORCE SYNC AFTER CHANGE
+    enforceLimits();
+}
+
+
+// ================= FORCE LIMIT SYNC =================
+function enforceLimits() {
+    let roomsField = document.querySelector('[name="rooms"]');
+    let adultsField = document.querySelector('[name="adults"]');
+
+    let rooms = parseInt(roomsField.value) || 1;
+    let adults = parseInt(adultsField.value) || 1;
+
+    if (rooms > 8) rooms = 8;
+    if (rooms < 1) rooms = 1;
+
+    roomsField.value = rooms;
+
+    let maxAdults = rooms * 2;
+
+    if (adults > maxAdults) {
+        adultsField.value = maxAdults;
+    }
 }
 
 
@@ -141,9 +144,5 @@ document.addEventListener("input", function (e) {
 
     e.target.value = value;
 
-    updateRooms();
+    enforceLimits();
 });
-
-document.querySelector('[name="rooms"]').addEventListener("input", () => changeCount("rooms", 0));
-document.querySelector('[name="adults"]').addEventListener("input", () => changeCount("adults", 0));
-document.querySelector('[name="children"]').addEventListener("input", () => changeCount("children", 0));

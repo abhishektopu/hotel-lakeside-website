@@ -76,57 +76,26 @@ if (adultsField) {
     adultsField.addEventListener("change", updateRooms);
 }
 
-function changeCount(type, change){
+function changeCount(type, change) {
+    const input = document.querySelector(`[name="${type}"]`);
+    if (!input) return;
 
-const field = document.querySelector('[name="'+type+'"]');
-if (!field) return;
+    let value = parseInt(input.value) || 0;
+    value += change;
 
-let value = parseInt(field.value);
+    if (type === "rooms") {
+        value = Math.max(1, Math.min(8, value));
+    }
 
-value += change;
+    if (type === "adults") {
+        value = Math.max(1, Math.min(16, value));
+    }
 
-if(type === "rooms"){
-if(value < 1) value = 1;
-if(value > 8) value = 8;
-}
+    if (type === "children") {
+        value = Math.max(0, value);
+    }
 
-if(type === "adults"){
+    input.value = value;
 
-if(value < 1) value = 1;
-
-let roomsField = document.querySelector('[name="rooms"]');
-let rooms = parseInt(roomsField.value);
-
-let maxAdults = rooms * 2;
-
-const note = document.getElementById("roomNote");
-
-if(value > maxAdults){
-
-rooms = Math.ceil(value / 2);
-roomsField.value = rooms;
-
-if(note){
-note.innerText = "Rooms increased automatically (2 adults per room)";
-}
-
-}else{
-
-if(note){
-note.innerText = "Maximum 2 adults per room";
-}
-
-}
-
-}
-
-if(type === "children"){
-if(value < 0) value = 0;
-if(value > 10) value = 10;
-}
-
-field.value = value;
-
-updateRooms();
-
+    updateRooms();
 }

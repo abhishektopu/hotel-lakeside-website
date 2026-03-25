@@ -94,6 +94,7 @@ function changeCount(type, change) {
     field.value = value;
 }
 
+
 // ================= FORCE LIMIT SYNC =================
 function enforceLimits() {
     let roomsField = document.querySelector('[name="rooms"]');

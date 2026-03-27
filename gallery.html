@@ -6,20 +6,22 @@
 <head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRJQRTXH" data-cfasync="false"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRJQRTXH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
 
+  // ✅ THIS IS THE KEY FIX
+  gtag('set', 'debug_mode', true);
+
   gtag('config', 'G-DRRJQRTXH', {
-  send_page_view: true,
-  transport_type: 'beacon',
-     debug_mode: true
-});
-
+    send_page_view: true,
+    transport_type: 'beacon'
+  });
 </script>
-
+  
 <!-- your other meta tags -->
 <meta charset="UTF-8">
 <title>Hotel Lakeside Gallery</title>

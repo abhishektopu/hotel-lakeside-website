@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>https://hotellakeside.co.in/</loc>
+</url>
 
-  <url>
-    <loc>https://hotellakeside.co.in/</loc>
-  </url>
+<url>
+  <loc>https://hotellakeside.co.in/rooms</loc>
+</url>
 
-  <url>
-    <loc>https://hotellakeside.co.in/rooms</loc>
-  </url>
+<url>
+  <loc>https://hotellakeside.co.in/contact</loc>
+</url>
 
-  <url>
-    <loc>https://hotellakeside.co.in/contact</loc>
-  </url>
+<url>
+  <loc>https://hotellakeside.co.in/gallery</loc>
+</url>
 
-  <url>
-    <loc>https://hotellakeside.co.in/gallery</loc>
-  </url>
-
-</urlset>
+<url>
+  <loc>https://hotellakeside.co.in/hotel-building</loc>
+</url>

@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Hotel Lakeside | Budget Hotel in Cherlapally Hyderabad</title>
+<meta name="description" content="Affordable budget hotel in Cherlapally Hyderabad near railway station & ECIL. Book AC & Non-AC rooms at best price.">
 
-<meta name="description" content="Budget hotel in Cherlapally Hyderabad near railway station and ECIL. Affordable AC & Non-AC rooms at Hotel Lakeside.">
-
-<link rel="canonical" href="https://www.hotellakeside.co.in/">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="stylef500.css">
-<link rel="icon" href="images/hotel-building.jpg">
+
+<style>
+body{
+font-family:'Poppins',sans-serif;
+}
+
+/* HERO FIX */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:url('images/hotel-building.jpg') center/cover no-repeat;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+top:0;
+left:0;
+}
+
+.hero-text{
+position:relative;
+color:white;
+max-width:700px;
+}
+
+.hero-text h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#d4af37;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+color:black;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:20px;
+color:#1f3b4d;
+}
+
+/* ROOMS */
+.rooms{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.room{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.room img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.room-info{
+padding:15px;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+background:#1f3b4d;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
 
 </head>
 
@@ -20,154 +146,98 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo">Hotel Lakeside</div>
+<div class="logo">Hotel Lakeside</div>
 
-  <nav class="menu">
-    <a href="/">Home</a>
-    <a href="/rooms">Rooms</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/contact">Contact</a>
-    <a href="/cherlapally-hotel">Cherlapally Hotel</a>
-    <a href="/hotel-near-ecil">Hotel Near ECIL</a>
-    <a href="https://wa.me/917899358934" class="book-btn">Book Now</a>
-  </nav>
+<div class="nav-right">
+<a href="/">Home</a>
+<a href="/rooms">Rooms</a>
+<a href="/gallery">Gallery</a>
+<a href="/contact">Contact</a>
+<a href="/cherlapally-hotel.html">Cherlapally Hotel</a>
+<a href="/hotel-near-ecil.html">Hotel Near ECIL</a>
+<a href="https://wa.me/917899358934" class="book-btn">Book Now</a>
+</div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
+<div class="hero-text">
+<h1>Budget Hotel in Cherlapally Hyderabad</h1>
+<p>Affordable AC & Non-AC rooms near railway station & ECIL</p>
 
-  <div class="hero-text">
-    <h1>Budget Hotel in Cherlapally Hyderabad | Hotel Lakeside</h1>
-    <p>Affordable AC & Non-AC rooms near Cherlapally railway station</p>
-
-    <div class="hero-buttons">
-      <a href="/rooms" class="btn">View Rooms</a>
-      <a href="https://wa.me/917899358934" class="btn book-btn">Book Room</a>
-    </div>
-  </div>
-
+<div class="hero-buttons">
+<a href="/rooms" class="btn">View Rooms</a>
+<a href="https://wa.me/917899358934" class="btn">Book Room</a>
+</div>
+</div>
 </section>
 
-<!-- SEO CONTENT -->
+<!-- ABOUT -->
 <section class="section">
-  <h2>Best Budget Hotel in Cherlapally Hyderabad Near ECIL</h2>
-
-  <p>
-    Hotel Lakeside is a budget hotel in Cherlapally Hyderabad offering clean and affordable AC and Non-AC rooms near Cherlapally railway station and ECIL industrial area.
-  </p>
-
-  <p>
-    Ideal for business travelers, workers, and visitors looking for comfortable accommodation at low price.
-  </p>
+<h2>Best Budget Hotel in Cherlapally Hyderabad</h2>
+<p>Hotel Lakeside offers clean, affordable AC & Non-AC rooms near Cherlapally railway station and ECIL industrial area. Perfect for travelers, workers, and business stays.</p>
 </section>
 
-<!-- LOCATION -->
+<!-- ROOMS -->
 <section class="section">
-  <h2>Hotel Near Cherlapally Railway Station</h2>
+<h2>Our Rooms</h2>
 
-  <p>
-    Located very close to Cherlapally railway station with easy access to ECIL and nearby industrial areas.
-  </p>
+<div class="rooms">
+
+<div class="room">
+<img src="images/ac-room.jpg">
+<div class="room-info">
+<h3>AC Room</h3>
+<p>AC, TV, WiFi, Geyser</p>
+<p><b>₹1500 / Night</b></p>
+<a href="https://wa.me/917899358934" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="room">
+<img src="images/non-ac-room.jpg">
+<div class="room-info">
+<h3>Non AC Room</h3>
+<p>WiFi, Geyser, Comfortable Stay</p>
+<p><b>₹1000 / Night</b></p>
+<a href="https://wa.me/917899358934" class="btn">Book Now</a>
+</div>
+</div>
+
+</div>
 </section>
 
 <!-- GALLERY -->
 <section class="section">
-  <h2>Hotel Gallery</h2>
+<h2>Hotel Gallery</h2>
 
-  <div class="gallery">
-    <img src="images/hotel-front.jpg" alt="Hotel Lakeside building">
-    <img src="images/reception-area.jpg" alt="Reception area Hotel Lakeside">
-    <img src="images/hotel-room.jpg" alt="Hotel room in Cherlapally Hyderabad">
-  </div>
-</section>
-
-<!-- ROOMS -->
-<section class="section" id="rooms">
-  <h2>Our Rooms</h2>
-
-  <div class="rooms">
-
-    <div class="room">
-      <img src="images/ac-room.jpg" alt="AC room in Cherlapally hotel">
-      <h3>AC Room</h3>
-      <p>AC, TV, WiFi, Geyser</p>
-      <p><b>₹1500 / Night</b></p>
-      <a href="https://wa.me/917899358934" class="btn">Book Now</a>
-    </div>
-
-    <div class="room">
-      <img src="images/non-ac-room.jpg" alt="Non AC room in Cherlapally hotel">
-      <h3>Non AC Room</h3>
-      <p>WiFi, Geyser, Comfortable Stay</p>
-      <p><b>₹1000 / Night</b></p>
-      <a href="https://wa.me/917899358934" class="btn">Book Now</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- INTERNAL LINKS -->
-<section class="section">
-  <h2>Explore More</h2>
-
-  <p>
-    <a href="/cherlapally-hotel">Best Budget Hotel in Cherlapally</a><br>
-    <a href="/hotel-near-ecil">Hotel Near ECIL Hyderabad</a>
-  </p>
-</section>
-
-<!-- EXTRA SEO BOOST -->
-<section class="section">
-<h2>Budget Hotel Near ECIL and Cherlapally Hyderabad</h2>
-
-<p>
-Hotel Lakeside is one of the best budget hotels near ECIL Hyderabad and Cherlapally railway station. We provide affordable rooms for business travelers, workers, and visitors.
-</p>
-
-<p>
-If you are searching for a hotel near ECIL, Cherlapally, or industrial area in Hyderabad, our hotel offers the best price and comfortable stay.
-</p>
+<div class="gallery">
+<img src="images/gallery1.jpg">
+<img src="images/gallery2.jpg">
+<img src="images/gallery3.jpg">
+</div>
 </section>
 
 <!-- FAQ -->
 <section class="section">
-  <h2>Frequently Asked Questions</h2>
+<h2>Frequently Asked Questions</h2>
 
-  <h3>Is Hotel Lakeside near Cherlapally railway station?</h3>
-  <p>Yes, we are located very close to the railway station.</p>
-
-  <h3>Do you offer budget rooms?</h3>
-  <p>Yes, rooms start from ₹1000.</p>
-
-  <h3>How to book a room?</h3>
-  <p>You can book via WhatsApp or phone call.</p>
-</section>
-
-<!-- GOOGLE MAP -->
-<section class="section">
-<h2>Our Location</h2>
-
-<iframe 
-src="https://www.google.com/maps?q=Cherlapally+Hyderabad&output=embed"
-width="100%" height="300" style="border:0;">
-</iframe>
+<p><b>Is hotel near Cherlapally railway station?</b><br>Yes, very close.</p>
+<p><b>Do you offer budget rooms?</b><br>Yes, starting ₹1000.</p>
+<p><b>How to book?</b><br>WhatsApp or call.</p>
 
 </section>
 
 <!-- CTA -->
 <section class="section">
-  <h2>Book Your Room Now</h2>
-  <p>Contact us directly for best price.</p>
-
-  <a href="https://wa.me/917899358934" class="btn book-btn">
-    Book on WhatsApp
-  </a>
+<h2>Book Your Room Now</h2>
+<a href="https://wa.me/917899358934" class="btn">Book on WhatsApp</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Hotel Lakeside</p>
-  <p>Located near Cherlapally railway station, ECIL and industrial area in Hyderabad.</p>
+© 2026 Hotel Lakeside<br>
+Near Cherlapally Railway Station, ECIL, Hyderabad
 </footer>
 
 </body>

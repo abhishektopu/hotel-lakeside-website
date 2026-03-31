@@ -88,16 +88,7 @@ font-weight:bold;
 
 /* HERO SECTION */
 
-.hero{
-background:url('images/hotel-building-hd.jpg') center/cover no-repeat;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-position:relative;
-}
+
 .hero {
     position: relative;
     height: 90vh;

@@ -118,18 +118,20 @@ backdrop-filter: blur(14px);
 }
 .hero-content p {
     color: #fff;
-
     background: rgba(0, 0, 0, 0.4);
     padding: 8px 14px;
     border-radius: 6px;
 
-    .hero-content {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+/* FIXED SEPARATE BLOCK */
+.hero-content {
     z-index: 2;
     max-width: 800px;
     margin: auto;
-}
-    display: inline-block;
-    margin-top: 12px;
+    text-align: center;
 }
 
 

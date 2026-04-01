@@ -129,7 +129,12 @@ Hotel Lakeside
 <a href="/rooms">Rooms</a>
 <a href="/gallery">Gallery</a>
 <a href="/contact">Contact</a>
-<a class="book-btn" href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside">
+<a class="book-btn"
+href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Lakeside"
+onclick="gtag('event','click',{
+event_category:'booking',
+event_label:'rooms_navbar_button'
+})">
 Book Now
 </a>
 </div>
@@ -155,8 +160,13 @@ Book Now
 
 <div class="price">₹1500 / Night</div>
 
-<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20AC%20room%20at%20Hotel%20Lakeside" class="btn">
-Book Now
+<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20AC%20room%20at%20Hotel%20Lakeside"
+onclick="gtag('event','click',{
+event_category:'booking',
+event_label:'rooms_ac_button'
+})"
+class="btn">
+📲 Book AC Room
 </a>
 
 </div>
@@ -175,8 +185,13 @@ Book Now
 
 <div class="price">₹1000 / Night</div>
 
-<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20Non%20AC%20room%20at%20Hotel%20Lakeside" class="btn">
-Book Now
+<a href="https://wa.me/917899358934?text=Hello%20I%20want%20to%20book%20Non%20AC%20room%20at%20Hotel%20Lakeside"
+onclick="gtag('event','click',{
+event_category:'booking',
+event_label:'rooms_nonac_button'
+})"
+class="btn">
+📲 Book Non-AC Room
 </a>
 
 </div>

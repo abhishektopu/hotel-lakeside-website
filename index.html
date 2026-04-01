@@ -154,15 +154,23 @@ margin-top:40px;
 
 <!-- NAVBAR -->
 <header class="navbar">
+
 <div class="logo">Hotel Lakeside</div>
 
+<!-- HAMBURGER -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <div class="nav-right">
+
+<!-- MENU -->
+<div class="menu" id="mobileMenu">
 <a href="/">Home</a>
 <a href="/rooms">Rooms</a>
 <a href="/gallery">Gallery</a>
 <a href="/contact">Contact</a>
 <a href="/cherlapally-hotel.html">Cherlapally Hotel</a>
 <a href="/hotel-near-ecil.html">Hotel Near ECIL</a>
+
 <a href="https://wa.me/917899358934"
 onclick="gtag('event','click',{
 event_category:'booking',
@@ -170,6 +178,9 @@ event_label:'navbar_button'
 })"
 class="btn">Book on WhatsApp</a>
 </div>
+
+</div>
+
 </header>
 
 <!-- HERO -->
@@ -277,6 +288,11 @@ class="btn">Book on WhatsApp</a>
 © 2026 Hotel Lakeside<br>
 Near Cherlapally Railway Station, ECIL, Hyderabad
 </footer>
-
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 </body>
+  
 </html>

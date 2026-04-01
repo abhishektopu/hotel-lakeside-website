@@ -860,3 +860,40 @@ box-shadow:0 10px 25px rgba(0,0,0,0.3);
   background: #1ebe5d;
   transform: scale(1.05);
 }
+/* HAMBURGER FIX */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-right{
+width:100%;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#1f3b4d;
+padding-top:80px;
+transform:translateX(-100%);
+transition:0.3s ease;
+z-index:2000;
+}
+
+.menu.active{
+transform:translateX(0);
+}
+
+.menu a{
+font-size:20px;
+margin:15px 0;
+}
+
+}

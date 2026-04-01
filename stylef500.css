@@ -939,4 +939,31 @@ box-shadow:0 6px 20px rgba(0,0,0,0.35);
 display:none;
 }
 }
+.back-home{
+text-align:center;
+margin:40px 0;
+}
+
+.back-home a{
+display:inline-block;
+background:#1f3b4d;
+color:white;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.back-home a:hover{
+background:#163041;
+transform:translateY(-2px);
+}
+@media(max-width:768px){
+.back-home a{
+width:80%;
+font-size:16px;
+padding:16px;
+}
+}
 

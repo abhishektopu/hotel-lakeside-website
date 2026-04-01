@@ -877,7 +877,29 @@ padding:6px 10px;
 flex-direction:column;
 gap:10px;
 }
+.hero-content h1{
+font-size:26px;
+line-height:1.2;
+padding:8px;
+}
 
+.hero-content p{
+font-size:13px;
+padding:5px 10px;
+}
+
+.hero-buttons{
+flex-direction:column;
+gap:10px;
+}
+
+.hero-buttons .btn{
+width:90%;
+margin:0 auto;
+font-size:14px;
+padding:12px;
+}
+    
 .menu{
 display:none;
 flex-direction:column;

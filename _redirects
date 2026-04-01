@@ -1,8 +1,13 @@
+# Force HTTPS + non-www
 http://hotellakeside.co.in/* https://hotellakeside.co.in/:splat 301!
+http://www.hotellakeside.co.in/* https://hotellakeside.co.in/:splat 301!
 https://www.hotellakeside.co.in/* https://hotellakeside.co.in/:splat 301!
 
-/hotel-near-cherlapally-railway-station.html /hotel-building 301
+# Clean URL redirects
+/index.html https://hotellakeside.co.in/ 301
+
 /rooms.html /rooms 301
 /gallery.html /gallery 301
 /contact.html /contact 301
-/index.html https://hotellakeside.co.in/ 301
+
+/hotel-near-cherlapally-railway-station.html /hotel-building 301

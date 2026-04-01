@@ -874,12 +874,18 @@ padding:20px 0;
 text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
-
+.menu{
+gap:10px;
+}
 .menu.active{
 display:flex;
 }
-
-.menu a{
+.menu .btn{
+margin-top:15px;
+}
+    .menu a{
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
 font-size:16px;
 padding:10px;
 margin:5px 0;

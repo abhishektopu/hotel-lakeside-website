@@ -899,6 +899,10 @@ margin:0 auto;
 font-size:14px;
 padding:12px;
 }
+    .menu.active ~ .hero,
+.menu.active ~ section {
+display:none;
+}
     
 .menu{
 display:none;
@@ -928,10 +932,28 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 .menu .btn{
 margin-top:15px;
 }
-    .menu.active ~ .hero,
-.menu.active ~ section {
-display:none;
-}
+
     
+}
+.whatsapp-sticky{
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+z-index:3000;
+}
+
+.whatsapp-sticky a{
+display:block;
+background:#25D366;
+color:#fff;
+text-align:center;
+padding:14px;
+font-size:16px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 

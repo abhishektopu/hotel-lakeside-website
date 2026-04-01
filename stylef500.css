@@ -934,3 +934,9 @@ letter-spacing:0.5px;
 text-decoration:none;
 box-shadow:0 6px 20px rgba(0,0,0,0.35);
 }
+@media(max-width:768px){
+.hero-buttons .btn:last-child{
+display:none;
+}
+}
+

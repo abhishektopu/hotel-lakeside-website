@@ -928,6 +928,10 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 .menu .btn{
 margin-top:15px;
 }
+    .menu.active ~ .hero,
+.menu.active ~ section {
+display:none;
+}
     
 }
 

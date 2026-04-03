@@ -1,2 +1,22 @@
-/sitemap.xml  /sitemap.xml  200
-/*            /index.html   200
+# Force HTTPS + non-www
+http://hotellakeside.co.in/*   https://hotellakeside.co.in/:splat  301!
+http://www.hotellakeside.co.in/*  https://hotellakeside.co.in/:splat  301!
+https://www.hotellakeside.co.in/*  https://hotellakeside.co.in/:splat  301!
+
+# Clean URL redirects
+/index.html  https://hotellakeside.co.in/  301
+/rooms.html  /rooms  301
+/gallery.html  /gallery  301
+/contact.html  /contact  301
+
+# Missing redirects (add these — this is what's broken)
+/hotel-building.html  /hotel-building  301
+/cherlapally-hotel.html  /cherlapally-hotel  301
+/hotel-near-ecil.html  /hotel-near-ecil  301
+
+# Rogue URLs Google crawled (canonical fix)
+/hotel-in-cherlapally.html  /cherlapally-hotel  301
+/booking.php  /rooms  301
+
+# Old slug redirect
+/hotel-near-cherlapally-railway-station.html  /hotel-building  301

@@ -6,10 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Hotel Lakeside | Budget Hotel in Cherlapally Hyderabad</title>
-<meta name="description" content="Affordable budget hotel near Cherlapally railway station & ECIL Hyderabad. AC & Non-AC rooms available.">
+<meta name="description" content="Budget hotel in Cherlapally Hyderabad near railway station & ECIL. AC rooms ₹1500/night, Non-AC ₹1000. Free WiFi, Geyser. Book directly on WhatsApp.">
+
+<!-- FIX 1: Canonical tag added -->
+<link rel="canonical" href="https://hotellakeside.co.in/" />
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="stylef500.css">
+<link rel="stylesheet" href="stylef500.css">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRJJQRTXH"></script>
@@ -19,7 +22,95 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-DRRJJQRTXH');
 </script>
-  
+
+<!-- FIX 2: Hotel Schema markup for Google rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Lakeside",
+  "description": "Affordable budget hotel near Cherlapally railway station and ECIL, Hyderabad. AC and Non-AC rooms available.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12-8/296/A/1, Cherlapalli",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "501302",
+    "addressCountry": "IN"
+  },
+  "telephone": "+917899358934",
+  "priceRange": "₹₹",
+  "url": "https://hotellakeside.co.in",
+  "image": "https://hotellakeside.co.in/images/hotel-building-hd.jpg",
+  "starRating": {
+    "@type": "Rating",
+    "ratingValue": "3"
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Geyser", "value": true}
+  ]
+}
+</script>
+
+<!-- FIX 3: FAQ Schema for Google rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Hotel Lakeside near Cherlapally railway station?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Hotel Lakeside is very close to Cherlapally railway station, making it ideal for business travelers and visitors arriving by train."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the room rates at Hotel Lakeside Hyderabad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-AC rooms start at ₹1000 per night and AC rooms are ₹1500 per night. All rooms include free WiFi and Geyser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a room at Hotel Lakeside?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book instantly via WhatsApp at +91 78993 58934 or call us directly. Booking takes less than 2 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the check-in and check-out time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check-in is at 12:00 PM and check-out is at 11:00 AM. Early check-in and late check-out can be arranged on request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Hotel Lakeside from ECIL Cross Roads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hotel Lakeside is just a few minutes from ECIL Cross Roads, making it the ideal budget stay for professionals visiting ECIL and the industrial area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is parking available at Hotel Lakeside?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, parking is available at Hotel Lakeside for guests travelling by car or bike."
+      }
+    }
+  ]
+}
+</script>
 
 <style>
 
@@ -39,8 +130,6 @@ justify-content:center;
 text-align:center;
 background:url('images/hotel-building-hd.jpg') center/cover no-repeat;
 }
-
-
 
 .hero-text{
 position:relative;
@@ -137,6 +226,28 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+/* FAQ */
+.faq-item{
+text-align:left;
+background:#f9f9f9;
+border-radius:10px;
+padding:18px 20px;
+margin-bottom:14px;
+}
+
+.faq-item b{
+display:block;
+color:#1f3b4d;
+margin-bottom:6px;
+font-size:15px;
+}
+
+.faq-item p{
+margin:0;
+color:#444;
+line-height:1.6;
+}
+
 /* FOOTER */
 footer{
 background:#1f3b4d;
@@ -163,13 +274,14 @@ margin-top:40px;
 <div class="nav-right">
 
 <!-- MENU -->
+<!-- FIX 4: All .html links replaced with clean URLs -->
 <div class="menu" id="mobileMenu">
 <a href="/">Home</a>
 <a href="/rooms">Rooms</a>
 <a href="/gallery">Gallery</a>
 <a href="/contact">Contact</a>
-<a href="/cherlapally-hotel.html">Cherlapally Hotel</a>
-<a href="/hotel-near-ecil.html">Hotel Near ECIL</a>
+<a href="/cherlapally-hotel">Cherlapally Hotel</a>
+<a href="/hotel-near-ecil">Hotel Near ECIL</a>
 
 <a href="https://wa.me/917899358934"
 onclick="gtag('event','click',{
@@ -190,7 +302,8 @@ class="btn">Book on WhatsApp</a>
     <p>Affordable AC & Non-AC rooms near railway station & ECIL</p>
 
     <div class="hero-buttons">
-      <a href="rooms.html" class="btn">View Rooms</a>
+      <!-- FIX 5: rooms.html → /rooms -->
+      <a href="/rooms" class="btn">View Rooms</a>
       <a href="https://wa.me/917899358934"
 onclick="gtag('event','click',{
 event_category:'booking',
@@ -214,7 +327,8 @@ class="btn">Book on WhatsApp</a>
 <div class="rooms">
 
 <div class="room">
-<img src="images/ac-room.jpg">
+<!-- FIX 6: alt text added to all images -->
+<img src="images/ac-room.jpg" alt="AC room at Hotel Lakeside Cherlapally Hyderabad - TV WiFi Geyser">
 <div class="room-info">
 <h3>AC Room</h3>
 <p>AC, TV, WiFi, Geyser</p>
@@ -230,12 +344,12 @@ class="btn">📲 Book AC Room on WhatsApp</a>
 </div>
 
 <div class="room">
-<img src="images/non-ac-room.jpg">
+<img src="images/non-ac-room.jpg" alt="Non-AC room at Hotel Lakeside Cherlapally Hyderabad - WiFi Geyser">
 <div class="room-info">
 <h3>Non AC Room</h3>
 <p>WiFi, Geyser, Comfortable Stay</p>
 <p><b>₹1000 / Night</b></p>
-  <p class="room-note">Limited rooms available – Book now</p>
+<p class="room-note">Limited rooms available – Book now</p>
 <a href="https://wa.me/917899358934"
 onclick="gtag('event','click',{
 event_category:'booking',
@@ -253,22 +367,48 @@ class="btn">📲 Book Non-AC Room on WhatsApp</a>
 <h2>Hotel Gallery</h2>
 
 <div class="gallery">
-<img src="images/reception-area.jpg">
-<img src="images/hotel-corridor.jpg">
-<img src="images/hotel-front.jpg">
-<img src="images/staircase.jpg">
-<img src="images/balcony-view.jpg">
-<img src="images/hotel-room.jpg">
+<img src="images/reception-area.jpg" alt="Hotel Lakeside reception area Cherlapally Hyderabad">
+<img src="images/hotel-corridor.jpg" alt="Hotel corridor at Hotel Lakeside Hyderabad">
+<img src="images/hotel-front.jpg" alt="Hotel Lakeside building front view Cherlapally">
+<img src="images/staircase.jpg" alt="Staircase at Hotel Lakeside Hyderabad">
+<img src="images/balcony-view.jpg" alt="Balcony view at Hotel Lakeside Cherlapally">
+<img src="images/hotel-room.jpg" alt="Hotel room interior at Hotel Lakeside Hyderabad">
 </div>
 </section>
 
-<!-- FAQ -->
+<!-- FIX 7: Expanded FAQ section with 6 questions and proper styling -->
 <section class="section">
 <h2>Frequently Asked Questions</h2>
 
-<p><b>Is hotel near Cherlapally railway station?</b><br>Yes, very close.</p>
-<p><b>Do you offer budget rooms?</b><br>Yes, starting ₹1000.</p>
-<p><b>How to book?</b><br>WhatsApp or call.</p>
+<div class="faq-item">
+  <b>Is Hotel Lakeside near Cherlapally railway station?</b>
+  <p>Yes, Hotel Lakeside is very close to Cherlapally railway station, making it ideal for business travelers and visitors arriving by train.</p>
+</div>
+
+<div class="faq-item">
+  <b>What are the room rates at Hotel Lakeside?</b>
+  <p>Non-AC rooms start at ₹1000 per night and AC rooms are ₹1500 per night. All rooms include free WiFi and Geyser. No hidden charges.</p>
+</div>
+
+<div class="faq-item">
+  <b>How do I book a room?</b>
+  <p>Book instantly via WhatsApp at +91 78993 58934 or call us directly. Booking takes less than 2 minutes — no advance payment required.</p>
+</div>
+
+<div class="faq-item">
+  <b>What are the check-in and check-out times?</b>
+  <p>Check-in is at 12:00 PM and check-out is at 11:00 AM. Early check-in and late check-out can be arranged on request, subject to availability.</p>
+</div>
+
+<div class="faq-item">
+  <b>How far is Hotel Lakeside from ECIL Cross Roads?</b>
+  <p>Hotel Lakeside is just a few minutes from ECIL Cross Roads, making it the ideal budget stay for professionals visiting ECIL and the surrounding industrial area.</p>
+</div>
+
+<div class="faq-item">
+  <b>Is parking available at Hotel Lakeside?</b>
+  <p>Yes, parking is available at Hotel Lakeside for guests travelling by car or bike.</p>
+</div>
 
 </section>
 
@@ -282,8 +422,10 @@ event_label:'cta_button'
 })"
 class="btn">Book on WhatsApp</a>
 </section>
-  <section class="back-home">
-    <a href="index.html">⬅ Back to Home</a>
+
+<!-- FIX 8: Back to home link fixed from index.html → / -->
+<section class="back-home">
+  <a href="/">⬅ Back to Home</a>
 </section>
 
 <!-- FOOTER -->
@@ -291,16 +433,19 @@ class="btn">Book on WhatsApp</a>
 © 2026 Hotel Lakeside<br>
 Near Cherlapally Railway Station, ECIL, Hyderabad
 </footer>
+
 <script>
 function toggleMenu(){
 document.getElementById("mobileMenu").classList.toggle("active");
 }
 </script>
-  <div class="whatsapp-sticky">
+
+<div class="whatsapp-sticky">
   <a href="https://wa.me/917899358934" target="_blank">
     💬 Book on WhatsApp
   </a>
 </div>
+
 </body>
-  
+
 </html>

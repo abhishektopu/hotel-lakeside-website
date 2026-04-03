@@ -7,8 +7,8 @@
 <title>Best Hotel Near ECIL Hyderabad | Hotel Lakeside Cherlapally</title>
 <meta name="description" content="Best budget hotel near ECIL Hyderabad. Hotel Lakeside offers AC rooms ₹1500 & Non-AC ₹1000/night. Free WiFi, parking, 24/7 hot water. Book on WhatsApp instantly.">
 
-<!-- FIX 1: Canonical tag -->
-<link rel="canonical" href="https://hotellakeside.co.in/hotel-near-ecil" />
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRJJQRTXH"></script>
@@ -19,147 +19,168 @@ gtag('js', new Date());
 gtag('config', 'G-DRRJJQRTXH');
 </script>
 
-<!-- FIX 2: LocalBusiness schema for ECIL page -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Hotel",
-  "name": "Hotel Lakeside - Near ECIL Hyderabad",
-  "description": "Budget hotel near ECIL Hyderabad with AC and Non-AC rooms. Free WiFi, parking and 24/7 hot water.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "12-8/296/A/1, Cherlapalli",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "postalCode": "501302",
-    "addressCountry": "IN"
-  },
-  "telephone": "+917899358934",
-  "priceRange": "₹₹",
-  "url": "https://hotellakeside.co.in/hotel-near-ecil",
-  "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "24/7 Hot Water", "value": true}
-  ]
-}
-</script>
-
 <link rel="stylesheet" href="style.css">
 
 <style>
-.content { padding: 50px 8%; max-width: 1100px; margin: auto; }
-.info-box { margin-bottom: 40px; }
-.info-box h2 { color: #1a3a52; margin-bottom: 15px; }
-.info-box p { font-size: 16px; line-height: 1.7; color: #444; }
-.facilities-box h2 { color: #1a3a52; margin-bottom: 20px; }
-.facility-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-.facility {
-  background: #f0f4f8;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
-}
-.cta {
-  text-align: center;
-  padding: 50px 20px;
-  background: #f9f9f9;
-}
-.cta h2 { color: #1a3a52; margin-bottom: 10px; }
-.cta p { color: #666; margin-bottom: 20px; }
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #d4af37;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 16px;
-}
-.btn:hover { background: #b8962e; }
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #1a3a52;
-  color: white;
-  margin-top: 40px;
-}
+  :root {
+    --primary-blue: #1a3a52;
+    --gold: #d4af37;
+    --whatsapp-green: #25D366;
+  }
+
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+
+  .content { padding: 50px 8%; max-width: 1100px; margin: auto; }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .btn-gold { background: var(--gold); color: #000; }
+  .btn-gold:hover { background: #b8962e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+  .btn-outline { border: 2px solid var(--gold); color: var(--gold); background: transparent; }
+  .btn-outline:hover { background: var(--gold); color: #000; }
+
+  /* Navbar Adjustments */
+  .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: var(--primary-blue); color: white; position: sticky; top: 0; z-index: 1000; }
+  .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; }
+  .book-btn { background: var(--gold); padding: 8px 20px; border-radius: 5px; color: black !important; font-weight: bold; }
+
+  /* Hero Section */
+  .hero { 
+    height: 60vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white;
+    position: relative;
+  }
+  .hero::before { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index: 1; }
+  .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
+  .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+  .hero-btns { margin-top: 25px; display: flex; gap: 15px; justify-content: center; }
+
+  /* Facilities */
+  .facility-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+  .facility { background: #f0f4f8; padding: 15px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+
+  /* Floating WhatsApp Button */
+  .float-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  .float-wa:hover { transform: scale(1.1); color: white; }
+
+  /* CTA Section */
+  .cta { text-align: center; padding: 60px 20px; background: #f4f7f9; border-radius: 20px; margin: 40px 8%; }
+  
+  .back-home { text-align: center; margin: 30px 0; }
+  .back-link { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .nav-links { display: none; } /* Simplified for mobile */
+  }
 </style>
 
 </head>
 
 <body>
 
-<!-- FIX 3: All navbar links clean URLs + correct phone number -->
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917899358934" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <header class="navbar">
-  <div class="logo">Hotel Lakeside</div>
-  <nav>
+  <div class="logo" style="font-size: 24px; font-weight: bold;">Hotel Lakeside</div>
+  <nav class="nav-links">
     <a href="/">Home</a>
     <a href="/rooms">Rooms</a>
     <a href="/gallery">Gallery</a>
-    <a href="/contact">Contact</a>
-    <a href="/cherlapally-hotel">Cherlapally Hotel</a>
-    <a href="/hotel-near-ecil">Hotel Near ECIL</a>
-    <a href="https://wa.me/917899358934" class="book-btn"
-       onclick="gtag('event','click',{event_category:'booking',event_label:'ecil_navbar'})">Book Now</a>
+    <a href="/cherlapally-hotel">Cherlapally</a>
+    <a href="/hotel-near-ecil">Near ECIL</a>
+    <a href="https://wa.me/917899358934" class="book-btn">Book Now</a>
   </nav>
 </header>
 
-<!-- HERO -->
-<!-- FIX 4: Alt text on hero background via aria-label -->
-<section class="hero" style="background:url('images/hotel-building-hd.jpg') center/cover;" aria-label="Hotel Lakeside building near ECIL Hyderabad">
+<section class="hero" style="background:url('images/hotel-building-hd.jpg') center/cover;">
   <div class="hero-content">
     <h1>Best Hotel Near ECIL Hyderabad</h1>
-    <p>Affordable AC & Non-AC rooms near ECIL Cross Roads & Cherlapally</p>
+    <p>Premium Comfort at Budget Prices — Starting from ₹1000</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/917899358934" class="btn btn-gold">
+        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+      </a>
+      <a href="/rooms" class="btn btn-outline" style="color: white; border-color: white;">View Room Photos</a>
+    </div>
   </div>
 </section>
 
-<!-- CONTENT -->
-<section class="content premium-content">
-
+<section class="content">
   <div class="info-box">
     <h2>Affordable Stay Near ECIL & Cherlapally</h2>
-    <p>Hotel Lakeside offers clean, comfortable, and budget-friendly rooms near ECIL Hyderabad with easy access to the industrial area, ECIL Cross Roads, and Cherlapally railway station. Ideal for business professionals, contractors, and visitors to ECIL.</p>
-    <p>AC rooms available at ₹1500/night and Non-AC rooms at ₹1000/night — all with free WiFi and 24/7 hot water.</p>
+    <p>Hotel Lakeside offers clean, comfortable, and budget-friendly rooms near ECIL Hyderabad. Ideal for business professionals, contractors, and visitors to the ECIL industrial area.</p>
+    <p><strong>Pricing:</strong> AC rooms at ₹1500/night | Non-AC rooms at ₹1000/night</p>
   </div>
 
   <div class="facilities-box">
     <h2>Hotel Facilities</h2>
     <div class="facility-grid">
-      <div class="facility">❄️ AC & Non-AC Rooms</div>
-      <div class="facility">📶 Free WiFi</div>
-      <div class="facility">🚿 24/7 Hot Water</div>
-      <div class="facility">🚗 Parking Available</div>
-      <div class="facility">📺 TV in AC Rooms</div>
-      <div class="facility">✅ Instant WhatsApp Booking</div>
+      <div class="facility"><i class="fas fa-snowflake" style="color: #00aaff;"></i> AC & Non-AC Rooms</div>
+      <div class="facility"><i class="fas fa-wifi" style="color: #555;"></i> Free High-Speed WiFi</div>
+      <div class="facility"><i class="fas fa-faucet-drip" style="color: #ff6600;"></i> 24/7 Hot Water</div>
+      <div class="facility"><i class="fas fa-car" style="color: #444;"></i> Secure Parking</div>
+      <div class="facility"><i class="fas fa-tv" style="color: #333;"></i> TV in AC Rooms</div>
+      <div class="facility"><i class="fas fa-check-circle" style="color: green;"></i> Instant Confirmation</div>
     </div>
   </div>
-
 </section>
 
-<!-- CTA -->
-<section class="cta premium-cta">
-  <h2>Book Your Room Near ECIL Instantly</h2>
-  <p>Quick confirmation via WhatsApp — no advance payment needed</p>
-  <a href="https://wa.me/917899358934"
-     onclick="gtag('event','click',{event_category:'booking',event_label:'ecil_cta'})"
-     class="btn">Book on WhatsApp</a>
+<section class="cta">
+  <h2>Ready to Book Your Stay?</h2>
+  <p>No advance payment required. Get instant confirmation on WhatsApp.</p>
+  <div style="margin-top: 30px;">
+    <a href="https://wa.me/917899358934" class="btn btn-gold" style="padding: 18px 40px; font-size: 18px;">
+      <i class="fab fa-whatsapp"></i> Chat & Book Now
+    </a>
+  </div>
 </section>
 
-<!-- FIX 5: Back to home clean URL -->
 <div class="back-home">
-  <a href="/">⬅ Back to Home</a>
+  <a href="/" class="back-link">← Back to Homepage</a>
 </div>
 
-<footer>
-  <p>© 2026 Hotel Lakeside | Near ECIL Cross Roads & Cherlapally, Hyderabad</p>
+<footer style="text-align: center; padding: 40px; background: #1a3a52; color: white;">
+  <p>© 2026 Hotel Lakeside | Near ECIL Cross Roads, Hyderabad</p>
 </footer>
 
 </body>
